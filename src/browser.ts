@@ -4,9 +4,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import fs from 'node:fs';
-import os from 'node:os';
-import path from 'node:path';
+import * as fs from 'node:fs';
+import * as os from 'node:os';
+import * as path from 'node:path';
 
 import type {
   Browser,
@@ -142,10 +142,7 @@ export async function launch(options: McpLaunchOptions): Promise<Browser> {
         (error as Error).message.includes('Connection closed'))
     ) {
       throw new Error(
-        `The browser is already running for ${userDataDir}. Use --isolated to run multiple browser instances.`,
-        {
-          cause: error,
-        },
+        `The browser is already running for ${userDataDir}. Use --isolated to run multiple browser instances.`
       );
     }
     throw error;
