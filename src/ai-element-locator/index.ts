@@ -37,3 +37,11 @@ export {
   type ConciseOutputConfig,
   type OutputFormat,
 } from './ConciseOutputFormatter.js';
+
+export {
+  DOMInspector,
+  type DeepDOMElement,
+  type DOMInspectorConfig,
+  type DOMSearchCriteria,
+  type ElementCluster,
+} from './DOMInspector.js';
